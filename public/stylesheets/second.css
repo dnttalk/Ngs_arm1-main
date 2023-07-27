@@ -1,0 +1,53 @@
+table {
+  border-collapse: collapse;
+  width: 540pt;
+}
+
+th {
+  border: 1px solid windowtext;
+  width: 54pt;
+  height: 16.2pt;
+}
+.check {
+  width: 216pt;
+  height: 16.2pt;
+}
+.greyed-out {
+  background-color: #ccc;
+}
+
+.sample-name-color {
+  color: blue;
+}
+
+.index-name-color {
+  color: red;
+}
+
+.disabled {
+  background-color: #f1f1f1;
+}
+
+.sample-name {
+  color: blue;
+}
+
+.index-name {
+  color: red;
+}
+.arrow-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: green;
+  color: white;
+  font-size: 16px;
+  cursor: not-allowed;
+}
+
+.blue-button {
+  background-color: blue;
+}
+
+.green-button {
+  background-color: green;
+}

@@ -1,0 +1,148 @@
+/* 小螢幕設備（手機） */
+@media screen and (max-width: 480px) {
+    .button-container.right-bottom {
+        flex-direction: column;
+        align-items: center;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .custom-button {
+        margin: 5px;
+        font-size: 24px;
+    }
+}
+
+/* 中型螢幕設備（平板） */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .button-container.right-bottom {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .custom-button {
+        margin: 10px;
+        font-size: 30px;
+    }
+}
+
+/* 大型螢幕設備（桌面） */
+@media screen and (min-width: 769px) {
+    .button-container.right-bottom {
+        bottom: 30px;
+        right: 30px;
+    }
+
+    .custom-button {
+        margin: 15px;
+        font-size: 36px;
+    }
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+
+.centered {
+    text-align: center;
+}
+
+.custom-button {
+    flex: 1;
+    height: 100px;
+    min-width: 300px;
+    background-color: #8ad2ee;
+    border: 5px solid #fcbb67;
+    color: #181717;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 20px;
+        /* 設定圓角半徑 */
+        font-size: 36px;
+        /* 設定字體大小 */
+}
+
+.custom-button:hover {
+    margin-bottom: 10px;
+        /* 設置按鈕之間的垂直間距 */
+    border-color: rgb(240, 203, 149);
+}
+.button-container{   
+    position: fixed;
+    bottom: 200px;
+    right: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 30vh;
+  
+     
+}
+.button-centered {
+    text-align: center;
+}
+.right-bottom-button {
+    display: block;
+    height: 50px;
+    min-width: 300px;
+    margin-top: 100px;
+    flex: 1;
+ 
+    min-width: 100px;
+    width: 150px;
+        /* 调整为所需的宽度 */
+    background-color: rgb(138, 209, 238);
+    border: 5px solid rgb(40, 54, 247);
+    color: rgb(32, 94, 210);
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 20px;
+    /* 設定圓角半徑 */
+    font-size: 18px;
+    /* 設定字體大小 */
+}
+.right-bottom-button button {
+    width: 100px;
+}
+.settings-icon {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 48px;
+    color: gray;
+    position: fixed;
+    bottom: 75px;
+    right: 250px;
+}
+.login-link {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    color: gray;
+    font-size: 32px;
+}
+
+.log-container {
+background-color: rgb(212, 40, 169);
+    border: 5px solid rgb(87, 161, 221);
+    color: rgb(46, 88, 167);
+    position: fixed;
+    top: 100px;
+    right: 250px;
+    font-size: 24px;
+}
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(60, 212, 40);
+    border: 5px solid rgb(163, 11, 11);
+    color: rgb(10, 10, 10);
+}

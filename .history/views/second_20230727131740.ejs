@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>人機介面示例</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/stylesheets/second.css">
+</head>
+
+<body>
+    <h1>
+        tp53 Sample number (1-24)
+    </h1>
+    <input type="number" max="24" min="1" value="" id="sampleNumberInput">
+    <div>
+        <input type="checkbox" id="PCR Mix1" name="PCR Mix1" checked>
+        <label for="PCR Mix1">PCR Mix1
+        </label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="PCR Mix2" name="PCR Mix2">
+        <label for="PCR Mix2">PCR Mix2</label>
+    </div>
+    <div>
+        <input type="checkbox" id="Magnetic beads" name="Magnetic beads">
+        <label for="Magnetic beads">Magnetic beads</label>
+    </div>
+    <div style="display: flex;">
+        <% for (let i=1; i <=3; i++) { %>
+            <div>
+                <table border="1" align="center" style="width: 100px; height: 100px;" cellspacing="0"
+                    id="sampleTable<%= i %>">
+                    <% for (let j=0; j < 8; j++) { %>
+                        <tr>
+                            <td>
+                                <input type="text" class="sample-name" id="SampleName_<%= i %>_<%= j + 1 %>"
+                                    name="SampleName_<%= i %>_<%= j + 1 %>" value="Sample name" disabled>
+                            </td>
+                        </tr>
+                        <% } %>
+                </table>
+            </div>
+            <% } %>
+    </div>
+    <div style="display: flex;">
+        <% for (let i=1; i <=3; i++) { %>
+            <div>
+                <table border="1" align="center" style="width: 200px; height: 100px;" cellspacing="0"
+                    id="indexTable<%= i %>">
+                    <% for (let j=0; j < 8; j++) { %>
+                        <tr>
+                            <td>
+                                <select class="index-name" id="IndexName1_<%= i %>_<%= j + 1 %>"
+                                    name="IndexName1_<%= i %>_<%= j + 1 %>" onchange="syncSelects(this)">
+                                    <option value="option1">S502 Primer</option>
+                                    <option value="option2">S503 Primer</option>
+                                    <option value="option2">S503 Primer</option>
+                                    <!-- 其他選項... -->
+                                </select>
+
+                                <select class="index-name" id="IndexName2_<%= i %>_<%= j + 2 %>"
+                                    name="IndexName2_<%= i %>_<%= j + 2 %>" onchange="syncSelects(this)">
+                                    <option value="optionA">選項A</option>
+                                    <option value="optionB">選項B</option>
+                                    <!-- 其他選項... -->
+                                </select>
+                            </td>
+                        </tr>
+                        <% } %>
+                </table>
+
+                <script>
+                    function syncSelects(select) {
+                        const otherSelect = select.id.includes('IndexName1') ? select.nextElementSibling : select.previousElementSibling;
+                        otherSelect.value = select.value;
+                    }
+                </script>
+            </div>
+            <% } %>
+    </div>
+    <a href="./first.ejs">
+        <button onclick="goToFirstPage()" id="leftButton" class="arrow-button" disabled>
+            <i class="arrow-icon left"></i>
+        </button>
+    </a>
+
+    <button id="rightButton" class="arrow-button" disabled>
+        <i class="arrow-icon right"></i>
+    </button>
+    <script src="/javascripts/second.js"></script>
+
+
+</body>
+
+</html>

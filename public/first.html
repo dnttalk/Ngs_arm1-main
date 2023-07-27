@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>人機介面示例</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/stylesheets/first.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="centered">
+            <button id="leukemiaBtn" class="custom-button">Leukemia</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="centered">
+            <button id="tp53Btn" class="custom-button">TP53</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="centered">
+            <button id="mpnBtn" class="custom-button">MPN</button>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <!-- PCR開蓋 -->
+        <button id="pcrUnloadBtn" class="custom-button right-bottom-button">PCR unload</button>
+        <!-- PCR關蓋 -->
+        <button id="pcrloadBtn" class="custom-button right-bottom-button">PCR load</button>
+        <!-- 歷史訊息 -->
+        <a href="../public/history.html"> <button id="historyBtn" class="custom-button right-bottom-button">
+                history</button></a>
+
+        <!-- setting -->
+        <button id="settingsBtn" class="settings-icon"><i class="fa fa-cog"></i></button>
+    </div>
+
+    <div class="log-container right-top">
+        <button id="loginBtn" class="log-container">
+            <%= user %>
+        </button>
+    </div>
+
+    <script src="/javascripts/first.js"></script>
+    <script src="/javascripts/PCR_open.js"></script>
+    <script src="/javascripts/PCR_close.js"></script>
+</body>
+
+</html>
